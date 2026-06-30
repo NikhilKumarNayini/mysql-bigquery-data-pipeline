@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="115f0fd9-697d-4730-8b03-ca7d6f714eff" name="Changes" comment="" />
+    <list default="true" id="115f0fd9-697d-4730-8b03-ca7d6f714eff" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/LinkedInQuestions.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/1_setup/dim_date_table_creation.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/1_setup/setup_catalog.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/1_setup/utilities.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/2_dimension_data_processing/1_customers_data_processing.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/2_dimension_data_processing/2_products_data_processing.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/2_dimension_data_processing/3_pricing_data_processing.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/3_fact_data_processing/1_full_load_fact.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/3_fact_data_processing/2_incremental_load_fact.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pyspark_ETL/SpadesPolished.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pyspark_ETL/SpadesScorer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pyspark_ETL/WindowFunctionOnSQLQuery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pySparkSetup.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pySparkSetup.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jupyter_Notebooks/New_Notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Jupyter_Notebooks/New_Notebook.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jupyter_Notebooks/playstoreAnalysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Jupyter_Notebooks/playstoreAnalysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jupyter_Notebooks/practiceQns.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Jupyter_Notebooks/practiceQns.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pyspark_ETL/ReadFromJDBC.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pyspark_ETL/ReadFromJDBC.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +40,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;NikhilKumarNayini&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/NikhilKumarNayini/pySparkSetup.git&quot;,
+    &quot;accountId&quot;: &quot;b5a355de-5593-4efe-bc0e-f0748419f587&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/Library/Python/3.9/lib/python/site-packages/pyspark/rdd.py" root0="SKIP_INSPECTION" />
   </component>
@@ -33,7 +64,7 @@
     <option name="ignoreSourceCode" value="false" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -49,20 +80,25 @@
     "Python.HelloSpark (1).executor": "Run",
     "Python.HelloSpark.executor": "Run",
     "Python.ReadFromJDBC.executor": "Run",
+    "Python.SpadesScorer.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "database.data.extractors.current.export.id": "SQL Inserts",
     "database.data.extractors.current.id": "SQL Inserts",
-    "last_opened_file_path": "/Users/nikkinani/PycharmProjects/pySparkSetup/Questions",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/nikkinani/PycharmProjects/pySparkSetup/Jupyter_Notebooks/fcmg",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "settings.editor.splitter.proportion": "0.28409094",
     "vue.rearranger.settings.migration": "true"
   },
@@ -74,6 +110,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Jupyter_Notebooks/fcmg" />
       <recent name="$PROJECT_DIR$/Questions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -81,7 +118,7 @@
       <recent name="$PROJECT_DIR$/Pyspark_ETL" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.SpadesScorer">
     <configuration name="HelloSpark" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pySparkSetup" />
       <option name="ENV_FILES" value="" />
@@ -95,9 +132,36 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/Projects/pythonProject/HelloSpark.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SpadesScorer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pySparkSetup" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="JAVA_HOME" value="/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home PYSPARK_PYTHON=python3 PYSPARK_DRIVER_PYTHON=python3 " />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pyspark_ETL" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pyspark_ETL/SpadesScorer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,6 +183,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
       <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
@@ -144,6 +209,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pyspark_ETL/interviewPrep.py" />
@@ -162,8 +228,8 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="PYSPARK_DRIVER_PYTHON" value="/opt/homebrew/Caskroom/miniconda/base/bin/python3.12" />
-        <env name="PYSPARK_PYTHON" value="/opt/homebrew/Caskroom/miniconda/base/bin/python3.12" />
+        <env name="PYSPARK_DRIVER_PYTHON" value="/opt/homebrew/Caskroom/miniconda/base/bin/python3" />
+        <env name="PYSPARK_PYTHON" value="/opt/homebrew/Caskroom/miniconda/base/bin/python3" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="SDK_NAME" value="Python 3.12 (pySparkSetup1)" />
@@ -171,6 +237,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pyspark_ETL/main.py" />
@@ -183,12 +250,14 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.SpadesScorer" />
       <item itemvalue="Python.HelloSpark" />
       <item itemvalue="Python.interviewPrep" />
-      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.SpadesScorer" />
         <item itemvalue="Python.interviewPrep" />
         <item itemvalue="Python.HelloSpark" />
       </list>
@@ -197,8 +266,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.29346.142" />
-        <option value="bundled-python-sdk-f2b7a9f6281b-6e1f45a539f7-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.29346.142" />
+        <option value="bundled-python-sdk-c59985aa861c-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.24374.152" />
       </set>
     </attachedChunks>
   </component>
@@ -241,7 +309,11 @@
       <workItem from="1767983323644" duration="142000" />
       <workItem from="1767983484011" duration="18000" />
       <workItem from="1767983513437" duration="290000" />
-      <workItem from="1767983875618" duration="144000" />
+      <workItem from="1767983875618" duration="4139000" />
+      <workItem from="1767988677931" duration="10057000" />
+      <workItem from="1768431362863" duration="3835000" />
+      <workItem from="1769452910505" duration="1435000" />
+      <workItem from="1771280309930" duration="2276000" />
     </task>
     <servers />
   </component>
@@ -261,13 +333,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
-          <url>file://$PROJECT_DIR$/Jupyter_Notebooks/practiceQns.ipynb</url>
-          <line>1</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

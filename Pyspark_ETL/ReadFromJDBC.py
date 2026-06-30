@@ -1,4 +1,3 @@
-
 def read_from_jdbc(spark):
     """Reads and writes data to MySQL using the provided Spark session."""
     url = "jdbc:mysql://localhost:3306/employees"
