@@ -1,5 +1,25 @@
 from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, to_date
 
+
+def read_csv(filepath, spark: SparkSession):
+
+    return spark.read \
+                .option("header", True) \
+                .option("inferSchema", True) \
+                .csv(filepath)
+
+def read_mysql_table(spark: SparkSession, table_name: str):
+    return (
+        spark.read
+        .format("jdbc")
+        .option("url", "jdbc:mysql://localhost:3306/SCD_Type2")
+        .option("dbtable", table_name)
+        .option("user", "root")
+        .option("password", "root")
+        .option("driver", "com.mysql.cj.jdbc.Driver")
+        .load()
+    )
 
 def extract_data(spark: SparkSession):
 

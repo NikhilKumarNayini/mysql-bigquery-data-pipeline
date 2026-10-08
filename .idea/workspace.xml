@@ -4,30 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="115f0fd9-697d-4730-8b03-ca7d6f714eff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/LinkedInQuestions.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/1_setup/dim_date_table_creation.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/1_setup/setup_catalog.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/1_setup/utilities.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/2_dimension_data_processing/1_customers_data_processing.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/2_dimension_data_processing/2_products_data_processing.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/2_dimension_data_processing/3_pricing_data_processing.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/3_fact_data_processing/1_full_load_fact.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jupyter_Notebooks/fcmg/3_fact_data_processing/2_incremental_load_fact.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pyspark_ETL/SpadesPolished.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pyspark_ETL/SpadesScorer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pyspark_ETL/WindowFunctionOnSQLQuery.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pySparkSetup.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pySparkSetup.iml" afterDir="false" />
+    <list default="true" id="115f0fd9-697d-4730-8b03-ca7d6f714eff" name="Changes" comment="Massive commit">
+      <change afterPath="$PROJECT_DIR$/Pyspark_ETL/SCD_type2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pyspark_ETL/initial_dimension_load.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jupyter_Notebooks/New_Notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Jupyter_Notebooks/New_Notebook.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jupyter_Notebooks/playstoreAnalysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Jupyter_Notebooks/playstoreAnalysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jupyter_Notebooks/practiceQns.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Jupyter_Notebooks/practiceQns.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pyspark_ETL/ReadFromJDBC.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pyspark_ETL/ReadFromJDBC.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pyspark_ETL/Extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pyspark_ETL/Extractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pyspark_ETL/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pyspark_ETL/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bestseller/bestseller_base_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bestseller/bestseller_builder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bestseller/bestseller_factory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bestseller/global_bestseller_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bestseller/main_bestseller.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="48" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,6 +34,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="spades_NN" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -62,6 +63,65 @@
   <component name="MigrationScriptOptions">
     <option name="ignoreImplicitObjects" value="true" />
     <option name="ignoreSourceCode" value="false" />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="3.82655256722378E-55" />
+      <entry key="MS500" value="1.3078608413503818E-11" />
+      <entry key="S2" value="0.0019016928962414014" />
+      <entry key="S5" value="0.08159361100550994" />
+      <entry key="S10" value="0.28564716301002024" />
+      <entry key="S30" value="0.6698155717530202" />
+      <entry key="S60" value="0.9589047267248596" />
+      <entry key="M2" value="1.6565581599627819" />
+      <entry key="M5" value="3.684610090503561" />
+      <entry key="M10" value="5.992985637729798" />
+      <entry key="M15" value="8.171611520062507" />
+      <entry key="M30" value="14.96324947437737" />
+      <entry key="H1" value="24.449448804533866" />
+      <entry key="H2" value="32.99931020871613" />
+      <entry key="H4" value="40.1233083997444" />
+      <entry key="D1" value="84.51732491942546" />
+      <entry key="W1" value="117.4389636815684" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000000002274" />
+      <entry key="S10" value="1.0000004769032664" />
+      <entry key="S30" value="1.0078129539319103" />
+      <entry key="S60" value="1.088695200329565" />
+      <entry key="M2" value="1.3147640503991618" />
+      <entry key="M5" value="1.8145765302781662" />
+      <entry key="M10" value="2.283439034982602" />
+      <entry key="M15" value="2.6685145801288934" />
+      <entry key="M30" value="3.809752415241467" />
+      <entry key="H1" value="5.393287049516551" />
+      <entry key="H2" value="6.820527940891603" />
+      <entry key="H4" value="7.928235598583576" />
+      <entry key="D1" value="13.661665655304667" />
+      <entry key="W1" value="17.994145900317143" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="4.438679272683972E-26" />
+      <entry key="MS500" value="8.500635791333658E-6" />
+      <entry key="S2" value="0.05588928088621862" />
+      <entry key="S5" value="0.39257897953670834" />
+      <entry key="S10" value="0.8431826360258993" />
+      <entry key="S30" value="1.5002921956525455" />
+      <entry key="S60" value="1.9529046454631003" />
+      <entry key="M2" value="2.9191419277027197" />
+      <entry key="M5" value="5.471165409092623" />
+      <entry key="M10" value="8.258007324259543" />
+      <entry key="M15" value="10.825468474505044" />
+      <entry key="M30" value="18.76251050199409" />
+      <entry key="H1" value="29.835473434232558" />
+      <entry key="H2" value="39.81533171428104" />
+      <entry key="H4" value="48.048913218944335" />
+      <entry key="D1" value="98.17808599027892" />
+      <entry key="W1" value="135.43292991015713" />
+    </decayedShown>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
@@ -94,11 +154,14 @@
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/nikkinani/PycharmProjects/pySparkSetup/Jupyter_Notebooks/fcmg",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "settings.editor.selected.configurable": "vcs.Git",
     "settings.editor.splitter.proportion": "0.28409094",
     "vue.rearranger.settings.migration": "true"
   },
@@ -118,7 +181,7 @@
       <recent name="$PROJECT_DIR$/Pyspark_ETL" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.SpadesScorer">
+  <component name="RunManager" selected="Python.main">
     <configuration name="HelloSpark" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pySparkSetup" />
       <option name="ENV_FILES" value="" />
@@ -128,6 +191,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (base)" />
       <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/Projects/pythonProject" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -179,8 +243,9 @@
         <env name="JAVA_HOME" value="/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home PYSPARK_PYTHON=python3 PYSPARK_DRIVER_PYTHON=python3 " />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (base)" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="true" />
@@ -225,16 +290,16 @@
       <module name="pySparkSetup" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
+      <option name="PARENT_ENVS" value="false" />
       <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="PYSPARK_DRIVER_PYTHON" value="/opt/homebrew/Caskroom/miniconda/base/bin/python3" />
         <env name="PYSPARK_PYTHON" value="/opt/homebrew/Caskroom/miniconda/base/bin/python3" />
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="SPARK_HOME" value="/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/site-packages/pyspark" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.12 (pySparkSetup1)" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pyspark_ETL" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="true" />
@@ -251,22 +316,24 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.SpadesScorer" />
       <item itemvalue="Python.HelloSpark" />
+      <item itemvalue="Python.SpadesScorer" />
       <item itemvalue="Python.interviewPrep" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.SpadesScorer" />
         <item itemvalue="Python.interviewPrep" />
         <item itemvalue="Python.HelloSpark" />
+        <item itemvalue="Python.SpadesScorer" />
+        <item itemvalue="Python.SpadesScorer" />
+        <item itemvalue="Python.interviewPrep" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-c59985aa861c-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.24374.152" />
+        <option value="bundled-python-sdk-73a66231627c-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.10968.92" />
       </set>
     </attachedChunks>
   </component>
@@ -315,6 +382,15 @@
       <workItem from="1769452910505" duration="1435000" />
       <workItem from="1771280309930" duration="2276000" />
     </task>
+    <task id="LOCAL-00001" summary="Massive commit">
+      <option name="closed" value="true" />
+      <created>1782832713529</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1782832713529</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,6 +406,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Massive commit" />
+    <MESSAGE value="Bulk commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bulk commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
