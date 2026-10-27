@@ -284,7 +284,7 @@ def TCSQuestion(spark):
     df = spark.read.option("header", True) \
                    .option("inferSchema", True) \
                    .option("delimiter", ",") \
-                   .csv("/Users/nikkinani/PycharmProjects/pySparkSetup/Data_Files/MOCK_DATA.csv")
+                   .csv("/Users/nikkinani/PycharmProjects/pySparkSetup/raw_data/MOCK_DATA.csv")
 
     window_spec = Window.partitionBy("category").orderBy(col("amount").desc())
 
@@ -413,16 +413,12 @@ def fiveOperations(spark):
     df = df.dropna(how='all')
 
     df.show()
-
-
 # # Consider a scenario where you have employee data stored in a CSV file with the following structure:
 # # Define an explicit schema for this dataset using StructType and StructField.
 # # Load this data into a PySpark DataFrame using the defined schema.
 # # Extract the employees who belong to the "IT" department and have a salary greater than 70000.
 # # Split the Address column into two separate columns: City and State.
 # # Save the transformed data into a Parquet file.
-
-
 def process_employee_data(spark):
 
     schema = StructType([ StructField("Emp_ID", IntegerType(), True),
@@ -439,12 +435,10 @@ def process_employee_data(spark):
             (104, "Anjali", 25, 80000, "IT", "Pune, Maharashtra"),
             (105, "Arjun", 40, 90000, "Management", "Hyderabad, Telangana")]
 
-
 # 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧
 # You are given a dataset containing sales transactions for different products.
 # The dataset consists of columns for product_id, product_name, and sales_amount.
 # Your task is to calculate the total sales for each product and filter out only the products with total sales greater than $1000.
-
 def total_sales_per_product(spark):
     data = [
         (1, "Product A", 500),

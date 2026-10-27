@@ -1,82 +1,48 @@
-import scd
-import Extractor
-import initial_dimension_load
+
+import pyspark
+
+import Extractor, Transformer
 
 from pyspark.sql import SparkSession
-
+from Pyspark_ETL import config
 
 
 def main():
     # Initialize Spark session
     spark = SparkSession.builder \
         .appName("MySQL JDBC Example") \
-        .config("spark.jars", "/Users/nikkinani/Downloads/mysql-connector-j-8.2.0/mysql-connector-j-8.2.0.jar") \
+        .config(
+        "spark.jars.packages",
+        f"{config.mysql_package},{config.bigquery_package}") \
         .getOrCreate()
 
     spark.sparkContext.setLogLevel("ERROR")
 
-    #extracted source data
-    source_path = "/Users/nikkinani/Downloads/source_products.csv"
+    try:
+        # Read MySQL source
+        source_df = Extractor.get_mysql_data(spark)
 
-    source_df = Extractor.read_csv(source_path, spark)
+        print("MYSQL SOURCE DATA")
+        source_df.show(truncate=False)
 
-    print("SOURCE DATA", source_df.show(truncate=False))
+        # Read BigQuery target
+        target_df = Extractor.get_target_data(spark)
 
-    # 2. Create initial dimension
-    initial_dim_df = initial_dimension_load.create_initial_dimension_load(
-        source_df
-    )
+        print("BIGQUERY TARGET DATA")
+        target_df.show(truncate=False)
 
-    print("INITIAL DIMENSION")
-    initial_dim_df.show(truncate=False)
+        # Perform reconciliation
+        missing_df = Transformer.find_missing_transactions(
+            source_df,
+            target_df
+        )
 
-    # 3. Load dimension into MySQL
-    initial_dimension_load.write_initial_dimension_to_mysql(
-        initial_dim_df
-    )
+        print("MISSING TRANSACTIONS")
+        missing_df.show(truncate=False)
 
-    spark.stop()
+    finally:
+        spark.stop()
 
-
-
-    final_df = scd.apply(source_df, target_df)
-    #
-    #
-    # print("FINAL SCD TYPE 2 DATA")
-    # print("Target Data count: ", final_df.count())
-    # final_df.show(truncate=False)
-    #
-    # final_df.write \
-    #     .mode("overwrite") \
-    #     .csv("/Users/nikkinani/Downloads/target_products.csv")
-    #
-    # print("Final SCD TYPE 2 DATA Validation")
-    # final_df \
-    #     .filter(col("current") == "Y") \
-    #     .groupBy("product_id") \
-    #     .agg(count("*").alias("current_count")) \
-    #     .filter(col("current_count") > 1) \
-    #     .show()
-    #
-    #
-
-    #
-    # # Transform data
-    # transformed_data = apply_transformations(extracted_data)
-    #
-    # # Step 4: Show transformed data
-    # for name, df in transformed_data.items():
-    #     print(f"\n====== Transformed {name} DataFrame ======")
-    #     df.show(truncate=False)
-
-    # from handling_data_skewness import HandlingDataSkewness
-    # HandlingDataSkewness(spark)
-
-    # from interviewPrep import total_sales_per_product
-    # total_sales_per_product(spark)
-
-
-    # Stop Spark when the program ends
     spark.stop()
     print("✅ Spark session stopped successfully.")
 

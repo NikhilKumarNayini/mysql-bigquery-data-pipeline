@@ -1,25 +1,48 @@
+import os
+import config
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, to_date
 
-
-def read_csv(filepath, spark: SparkSession):
+def read_csv(source_path, spark: SparkSession):
 
     return spark.read \
                 .option("header", True) \
                 .option("inferSchema", True) \
-                .csv(filepath)
+                .csv(source_path)
 
-def read_mysql_table(spark: SparkSession, table_name: str):
-    return (
+# ------------------------------------------
+# 2. READ SOURCE FROM MYSQL
+# ------------------------------------------
+def get_mysql_data(spark):
+
+    source_df = (
         spark.read
         .format("jdbc")
-        .option("url", "jdbc:mysql://localhost:3306/SCD_Type2")
-        .option("dbtable", table_name)
-        .option("user", "root")
-        .option("password", "root")
-        .option("driver", "com.mysql.cj.jdbc.Driver")
+        .option( "url", f"jdbc:mysql://{config.MYSQL_HOST}:"f"{config.MYSQL_PORT}/{config.MYSQL_DATABASE}")
+        .option("dbtable", config.DB_TABLE)
+        .option("user", os.environ["MYSQL_USER"])
+        .option("password", os.environ["MYSQL_PASSWORD"])
+        .option("driver", config.DRIVER)
         .load()
     )
+
+    return source_df
+# ------------------------------------------
+# 3. READ TARGET FROM BIGQUERY
+# ------------------------------------------
+def get_target_data(spark):
+
+    target_df = (
+        spark.read
+        .format("bigquery")
+        .option("parentProject", config.PROJECT_ID)
+        .load(
+            f"{config.PROJECT_ID}."
+            f"{config.DATASET}."
+            f"{config.BQ_TABLE}"
+        )
+    )
+
+    return target_df
 
 def extract_data(spark: SparkSession):
 

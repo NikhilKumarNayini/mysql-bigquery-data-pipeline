@@ -74,6 +74,60 @@ def transform_ECT_data(df):
     return df
 
 
+# Keep only COMPLETED transactions with amount > 0.
+# Remove duplicate transaction_id values, retaining the row with the latest updated_at.
+# Select transaction_id, customer_id, amount, and updated_at.
+# Write the result in Parquet format to gs://curated-bucket/transactions/ using overwrite mode.
+
+def transform_transactions_data(df):
+
+    df = df.withColumn("amount", F.col("amount").cast("decimal(18,2)")) \
+           .withColumn("updated_at", F.col("updated_at").cast("timestamp"))
+
+    filtered_df = df.filter( (F.col("amount") > 0) &
+                             (F.col("status") == "COMPLETED")
+                            )
+
+    window_spec = Window.partitionBy("transaction_id").orderBy(F.col("updated_at").desc())
+
+    curated_df = filtered_df.withColumn("row_num", F.row_number().over(window_spec)) \
+                                .filter(F.col("row_num") == 1) \
+                                .select("transaction_id","customer_id", "amount", "updated_at")
+
+    curated_df.show(10, False)
+
+    return curated_df
+
+# You are working on a retail analytics pipeline.
+# Your business team wants to find the top two customers in each region based on total completed transaction amount.
+
+def get_top_two_customers_by_region(df):
+
+
+    filtered_df = df.filter(F.col("status") == "COMPLETED")
+
+    window_spec = Window.partitionBy("region").orderBy(
+        F.col("total_amount").desc(),
+              F.col("customer_id").asc()   # secondary condition, if two customers has same amount, assigns rank as per id
+    )
+
+    grouped_df = filtered_df.groupBy(F.col("customer_id"), F.col("region")) \
+                            .agg(F.sum(F.col("amount")).alias("total_amount")) \
+                            .withColumn("row_num", F.row_number().over(window_spec)) \
+                            .filter(F.col("row_num") <= 2) \
+
+    return grouped_df
+
+def find_missing_transactions(source_df, target_df):
+
+    missing_df = source_df.join(
+        target_df.select("transaction_id"),
+        on="transaction_id",
+        how="left_anti"
+    )
+
+    return missing_df
+
 
 def apply_transformations(dataframes):
 

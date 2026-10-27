@@ -4,23 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="115f0fd9-697d-4730-8b03-ca7d6f714eff" name="Changes" comment="Massive commit">
-      <change afterPath="$PROJECT_DIR$/Pyspark_ETL/SCD_type2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pyspark_ETL/initial_dimension_load.py" afterDir="false" />
+    <list default="true" id="115f0fd9-697d-4730-8b03-ca7d6f714eff" name="Changes" comment="SCD_Type2 Learning">
+      <change afterPath="$PROJECT_DIR$/Pyspark_ETL/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pyspark_ETL/mysql_bigquery_reconciliation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/multi_hot_key_salting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raw_data/transactions.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jupyter_Notebooks/New_Notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Jupyter_Notebooks/New_Notebook.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data_Files/1744120415668.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/1744120415668.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data_Files/MOCK_DATA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/MOCK_DATA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data_Files/Sources" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/Sources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jupyter_Notebooks/practiceQns.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Jupyter_Notebooks/practiceQns.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pyspark_ETL/Extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pyspark_ETL/Extractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pyspark_ETL/Transformer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pyspark_ETL/Transformer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pyspark_ETL/handling_data_skewness.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pyspark_ETL/handling_data_skewness.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pyspark_ETL/interviewPrep.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pyspark_ETL/interviewPrep.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pyspark_ETL/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pyspark_ETL/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bestseller/bestseller_base_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bestseller/bestseller_builder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bestseller/bestseller_factory.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bestseller/global_bestseller_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bestseller/main_bestseller.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DBNavigator.Project.Workspace.Settings">
+    <assistant-settings>
+      <credential-settings>
+        <credentials />
+      </credential-settings>
+      <profile-settings>
+        <profiles />
+      </profile-settings>
+      <mcp-server-settings>
+        <workspace-integration value="false" />
+        <mcp-servers />
+        <mcp-tool-approvals />
+      </mcp-server-settings>
+    </assistant-settings>
   </component>
   <component name="EmbeddingIndexingInfo">
     <option name="cachedIndexableFilesCount" value="48" />
@@ -66,61 +85,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="3.82655256722378E-55" />
-      <entry key="MS500" value="1.3078608413503818E-11" />
-      <entry key="S2" value="0.0019016928962414014" />
-      <entry key="S5" value="0.08159361100550994" />
-      <entry key="S10" value="0.28564716301002024" />
-      <entry key="S30" value="0.6698155717530202" />
-      <entry key="S60" value="0.9589047267248596" />
-      <entry key="M2" value="1.6565581599627819" />
-      <entry key="M5" value="3.684610090503561" />
-      <entry key="M10" value="5.992985637729798" />
-      <entry key="M15" value="8.171611520062507" />
-      <entry key="M30" value="14.96324947437737" />
-      <entry key="H1" value="24.449448804533866" />
-      <entry key="H2" value="32.99931020871613" />
-      <entry key="H4" value="40.1233083997444" />
-      <entry key="D1" value="84.51732491942546" />
-      <entry key="W1" value="117.4389636815684" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000002364414804" />
+      <entry key="S2" value="1.034307364525293" />
+      <entry key="S5" value="1.5372591811400844" />
+      <entry key="S10" value="2.552751529892241" />
+      <entry key="S30" value="4.460867187534809" />
+      <entry key="S60" value="5.928054107262953" />
+      <entry key="M2" value="8.872216542839274" />
+      <entry key="M5" value="18.428918286200638" />
+      <entry key="M10" value="29.20216534388409" />
+      <entry key="M15" value="36.06989346261728" />
+      <entry key="M30" value="54.65393408006752" />
+      <entry key="H1" value="100.91330780703409" />
+      <entry key="H2" value="178.98475907896693" />
+      <entry key="H4" value="263.08728771439297" />
+      <entry key="D1" value="419.60940419852244" />
+      <entry key="W1" value="517.2026959152631" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000000002274" />
-      <entry key="S10" value="1.0000004769032664" />
-      <entry key="S30" value="1.0078129539319103" />
-      <entry key="S60" value="1.088695200329565" />
-      <entry key="M2" value="1.3147640503991618" />
-      <entry key="M5" value="1.8145765302781662" />
-      <entry key="M10" value="2.283439034982602" />
-      <entry key="M15" value="2.6685145801288934" />
-      <entry key="M30" value="3.809752415241467" />
-      <entry key="H1" value="5.393287049516551" />
-      <entry key="H2" value="6.820527940891603" />
-      <entry key="H4" value="7.928235598583576" />
-      <entry key="D1" value="13.661665655304667" />
-      <entry key="W1" value="17.994145900317143" />
+      <entry key="MS100" value="2.3029716704484104E-7" />
+      <entry key="MS500" value="0.047038960856774246" />
+      <entry key="S2" value="0.4663586818965038" />
+      <entry key="S5" value="0.7897292475453375" />
+      <entry key="S10" value="1.0890175368249118" />
+      <entry key="S30" value="1.6348707192396972" />
+      <entry key="S60" value="2.0836279255479004" />
+      <entry key="M2" value="2.6856994736749837" />
+      <entry key="M5" value="3.7336638410160763" />
+      <entry key="M10" value="4.548084604855929" />
+      <entry key="M15" value="4.96139747215191" />
+      <entry key="M30" value="5.989171339039964" />
+      <entry key="H1" value="9.149624346179774" />
+      <entry key="H2" value="15.10964503984853" />
+      <entry key="H4" value="21.58283224729382" />
+      <entry key="D1" value="36.14074582178101" />
+      <entry key="W1" value="48.462742368982255" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="4.438679272683972E-26" />
-      <entry key="MS500" value="8.500635791333658E-6" />
-      <entry key="S2" value="0.05588928088621862" />
-      <entry key="S5" value="0.39257897953670834" />
-      <entry key="S10" value="0.8431826360258993" />
-      <entry key="S30" value="1.5002921956525455" />
-      <entry key="S60" value="1.9529046454631003" />
-      <entry key="M2" value="2.9191419277027197" />
-      <entry key="M5" value="5.471165409092623" />
-      <entry key="M10" value="8.258007324259543" />
-      <entry key="M15" value="10.825468474505044" />
-      <entry key="M30" value="18.76251050199409" />
-      <entry key="H1" value="29.835473434232558" />
-      <entry key="H2" value="39.81533171428104" />
-      <entry key="H4" value="48.048913218944335" />
-      <entry key="D1" value="98.17808599027892" />
-      <entry key="W1" value="135.43292991015713" />
+      <entry key="MS100" value="3.649534630431078E-4" />
+      <entry key="MS500" value="0.21334874669554899" />
+      <entry key="S2" value="0.9974569274642938" />
+      <entry key="S5" value="1.9871238864632406" />
+      <entry key="S10" value="3.3786044662892514" />
+      <entry key="S30" value="5.951506686759833" />
+      <entry key="S60" value="7.91367556967287" />
+      <entry key="M2" value="11.48114492165315" />
+      <entry key="M5" value="22.09662360781344" />
+      <entry key="M10" value="33.698032855252784" />
+      <entry key="M15" value="40.98906136275489" />
+      <entry key="M30" value="60.61277265804872" />
+      <entry key="H1" value="110.03623541550729" />
+      <entry key="H2" value="194.07173787527375" />
+      <entry key="H4" value="284.6541166820726" />
+      <entry key="D1" value="455.7460715915313" />
+      <entry key="W1" value="565.664716868213" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -142,6 +161,9 @@
     "Python.ReadFromJDBC.executor": "Run",
     "Python.SpadesScorer.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.multi_hot_key_salting.executor": "Run",
+    "Python.mysql_bigquery_reconciliation.executor": "Run",
+    "Python.test.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -161,7 +183,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
-    "settings.editor.selected.configurable": "vcs.Git",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "settings.editor.splitter.proportion": "0.28409094",
     "vue.rearranger.settings.migration": "true"
   },
@@ -182,32 +204,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="HelloSpark" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pySparkSetup" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.12 (base)" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/Projects/pythonProject" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/Projects/pythonProject/HelloSpark.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="SpadesScorer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pySparkSetup" />
       <option name="ENV_FILES" value="" />
@@ -292,6 +288,8 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="false" />
       <envs>
+        <env name="MYSQL_PASSWORD" value="root" />
+        <env name="MYSQL_USER" value="root" />
         <env name="PYSPARK_DRIVER_PYTHON" value="/opt/homebrew/Caskroom/miniconda/base/bin/python3" />
         <env name="PYSPARK_PYTHON" value="/opt/homebrew/Caskroom/miniconda/base/bin/python3" />
         <env name="PYTHONUNBUFFERED" value="1" />
@@ -314,19 +312,103 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="multi_hot_key_salting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pySparkSetup" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="JAVA_HOME" value="/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home PYSPARK_PYTHON=python3 PYSPARK_DRIVER_PYTHON=python3 " />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (base)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multi_hot_key_salting.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mysql_bigquery_reconciliation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pySparkSetup" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="MYSQL_PASSWORD" value="root" />
+        <env name="MYSQL_USER" value="root" />
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="JAVA_HOME" value="/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home PYSPARK_PYTHON=python3 PYSPARK_DRIVER_PYTHON=python3 " />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pyspark_ETL" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pyspark_ETL/mysql_bigquery_reconciliation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pySparkSetup" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="JAVA_HOME" value="/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home PYSPARK_PYTHON=python3 PYSPARK_DRIVER_PYTHON=python3 " />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (base)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pyspark_ETL" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pyspark_ETL/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.HelloSpark" />
+      <item itemvalue="Python.mysql_bigquery_reconciliation" />
       <item itemvalue="Python.SpadesScorer" />
       <item itemvalue="Python.interviewPrep" />
+      <item itemvalue="Python.multi_hot_key_salting" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mysql_bigquery_reconciliation" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.multi_hot_key_salting" />
         <item itemvalue="Python.interviewPrep" />
-        <item itemvalue="Python.HelloSpark" />
         <item itemvalue="Python.SpadesScorer" />
-        <item itemvalue="Python.SpadesScorer" />
-        <item itemvalue="Python.interviewPrep" />
       </list>
     </recent_temporary>
   </component>
@@ -390,7 +472,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782832713529</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="SCD_Type2 Learning">
+      <option name="closed" value="true" />
+      <created>1791478133205</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1791478133205</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,10 +500,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Massive commit" />
     <MESSAGE value="Bulk commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bulk commit" />
+    <MESSAGE value="SCD_Type2 Learning" />
+    <option name="LAST_COMMIT_MESSAGE" value="SCD_Type2 Learning" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Pyspark_ETL/interviewPrep.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
